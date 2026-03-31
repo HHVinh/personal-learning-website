@@ -18,12 +18,14 @@ export default async function TinAPage({ params }: PageProps) {
   const topicValue: Topic = topic === 'tin-b' ? 'tin_b' : 'tin_a';
 
   let resources: Resource[] = [];
+  let error: string | null = null;
   try {
     resources = await getResourcesByTopic(topicValue);
-  } catch (error) {
-    console.error('Failed to fetch resources:', error);
+  } catch (err) {
+    console.error('Failed to fetch resources:', err);
+    error = err instanceof Error ? err.message : 'Failed to load resources';
     resources = [];
   }
 
-  return <ResourceList initialResources={resources} topic={topicValue} />;
+  return <ResourceList initialResources={resources} topic={topicValue} error={error} />;
 }

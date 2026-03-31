@@ -3,7 +3,28 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(nohup /Users/vinh/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6/bin/start-worktree.sh --project-dir /Users/vinh/Documents/openrouter-demo/demo)",
+      "Bash(git worktree:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(npm run:*)",
+      "Bash(rm:*)",
+      "Bash(git reset:*)",
+      "Bash(git:*)",
+      "Bash(find /Users/vinh/Documents/openrouter-demo/demo -type f -name *.css)",
+      "Bash(find /Users/vinh/Documents/openrouter-demo/demo/.claude/worktrees/agent-a496b62f -type f -name *.toml -o -name next-env.d.ts)",
+      "Bash(npm view:*)",
+      "Bash(node:*)",
+      "Bash(ls:*)",
+      "Bash(npx tsc:*)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(pkill:*)",
+      "Bash(cp:*)",
+      "Bash(curl -s http://localhost:3000/tin-a)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3001/tin-a)"
     ]
   }
 }
