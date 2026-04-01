@@ -51,3 +51,20 @@ export async function insertResource(resource: {
 
   return insertedRow as Resource;
 }
+
+export async function getAllResources(): Promise<Resource[]> {
+  const db = getDb();
+  const result = await db
+    .prepare('SELECT * FROM resources ORDER BY order_index ASC, created_at DESC')
+    .all();
+
+  return (result.results ?? []) as unknown as Resource[];
+}
+
+export async function deleteResource(id: number): Promise<void> {
+  const db = getDb();
+  await db
+    .prepare('DELETE FROM resources WHERE id = ?')
+    .bind(id)
+    .run();
+}

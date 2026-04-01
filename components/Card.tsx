@@ -7,7 +7,7 @@ export interface CardProps {
   description: string;
   href: string;
   icon: string;
-  color: 'violet' | 'blue';
+  color: 'violet' | 'blue' | 'emerald';
   size?: 'sm' | 'md' | 'lg';
   ariaLabel?: string;
 }
@@ -15,6 +15,7 @@ export interface CardProps {
 const gradients = {
   violet: 'from-violet-500 to-purple-600',
   blue: 'from-blue-500 to-cyan-600',
+  emerald: 'from-emerald-500 to-teal-600',
 } as const;
 
 const sizeClasses = {
