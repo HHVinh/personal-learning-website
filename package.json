@@ -8,7 +8,7 @@
     "pages:build": "npx @cloudflare/next-on-pages",
     "start": "next start",
     "lint": "next lint",
-    "db:push": "npx wrangler d1 execute --database learning-db --file=migrations/001_init.sql --remote",
+    "db:push": "npx wrangler d1 execute learning-db --file scripts/seed.sql --remote",
     "db:local": "npx wrangler d1 execute --database learning-db --file=migrations/001_init.sql --local"
   },
   "dependencies": {
