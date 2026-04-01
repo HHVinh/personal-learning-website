@@ -1,6 +1,8 @@
 import { getDb } from '@/lib/db';
 import { seed } from '@/scripts/seed';
 
+export const runtime = 'edge';
+
 export async function GET(request: Request) {
   // Block in production environment
   if (process.env.NODE_ENV === 'production') {
