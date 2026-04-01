@@ -24,7 +24,22 @@
       "Bash(cp:*)",
       "Bash(curl -s http://localhost:3000/tin-a)",
       "Bash(curl -s http://localhost:3000/)",
-      "Bash(curl -s http://localhost:3001/tin-a)"
+      "Bash(curl -s http://localhost:3001/tin-a)",
+      "WebSearch",
+      "Bash(curl:*)",
+      "Bash(npx wrangler:*)",
+      "Bash(cp -r /Users/vinh/Documents/openrouter-demo/demo/lib/db.ts /Users/vinh/Documents/openrouter-demo/demo/.claude/worktrees/agent-afe003ae/lib/db.ts)",
+      "Bash(cp -r /Users/vinh/Documents/openrouter-demo/demo/wrangler.toml /Users/vinh/Documents/openrouter-demo/demo/.claude/worktrees/agent-afe003ae/wrangler.toml)",
+      "Bash(cp -r /Users/vinh/Documents/openrouter-demo/demo/scripts/seed.ts /Users/vinh/Documents/openrouter-demo/demo/.claude/worktrees/agent-afe003ae/scripts/seed.ts)",
+      "Bash(cp -r /Users/vinh/Documents/openrouter-demo/demo/app/api/seed/route.ts /Users/vinh/Documents/openrouter-demo/demo/.claude/worktrees/agent-afe003ae/app/api/seed/route.ts)",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(npx eslint:*)",
+      "Bash(echo $?)",
+      "Bash(npx @cloudflare/next-on-pages)",
+      "Bash(NPM_CONFIG_LEGACY_PEER_DEPS=true npx @cloudflare/next-on-pages)",
+      "Bash(find .next/server -name *seed* -type f)",
+      "Bash(rm -f .gitmodules)",
+      "Bash(rm -rf .claude/worktrees/)"
     ]
   }
 }

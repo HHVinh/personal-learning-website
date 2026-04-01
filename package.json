@@ -3,18 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:build": "next build --no-lint && wrangler pages deploy --dry-run",
+    "db:push": "npx wrangler d1 execute --database learning-db --file=migrations/001_init.sql --remote",
+    "db:local": "npx wrangler d1 execute --database learning-db --file=migrations/001_init.sql --local"
   },
   "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "@cloudflare/d1": "^1.4.1"
+    "@cloudflare/d1": "^1.4.1",
+    "next": "^15.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
