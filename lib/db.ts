@@ -1,5 +1,9 @@
 import { Database } from '@cloudflare/d1';
 
+declare global {
+  var DB: Database | undefined;
+}
+
 // Global variable to hold the database instance
 let db: Database | null = null;
 
@@ -20,7 +24,13 @@ export function initializeDb(database: Database) {
  */
 export function getDb(): Database {
   if (!db) {
-    throw new Error('Database not initialized. Call initializeDb() first with the D1 binding from env.DB');
+    // Fallback for Cloudflare runtime where DB binding is auto-injected
+    const runtimeDb = globalThis.DB as Database | undefined;
+    if (runtimeDb) {
+      db = runtimeDb;
+    } else {
+      throw new Error('Database not initialized. Call initializeDb() first with the D1 binding from env.DB');
+    }
   }
   return db;
 }
