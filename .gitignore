@@ -34,6 +34,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# claude/antigravity
+.claude/
+
+# wrangler
+.wrangler/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
